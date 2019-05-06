@@ -6,23 +6,26 @@ public class App
 	private static final Scanner scanner = new Scanner(System.in);
     public static void main( String[] args )
     {
-    
-    	double num1;
-    	double num2;
+
+//    	double num1;
+//    	double num2;
     	char operator;
     	char question;
     	double answer = 0.0;
-    	
+    
     boolean mathOperation = true;
+  
     
    while(mathOperation) {
     
     System.out.println("Please enter first number");
-    num1 = scanner.nextInt();
+    double num1 = Double.parseDouble(scanner.next()); //changed from int to double
+    
     System.out.println("What mathoperation?");
     operator = scanner.next().charAt(0);
+    
     System.out.println("Please enter second number");
-    num2 = scanner.nextInt();
+    double num2 = Double.parseDouble(scanner.next()); //change from int to double
  
     switch (operator) {
     
@@ -50,8 +53,8 @@ public class App
     
    } // while ends
   
+    	}
     
-    }
     public static double add (double num1, double num2) {
         
     	double result = num1 + num2;
